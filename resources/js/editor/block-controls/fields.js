@@ -7,6 +7,8 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
  */
 
+const { isEmptyElement } = wp.element;
+
 // Import block controls.
 import ControlVaadinTheme from './control-vaadin-theme';
 
@@ -14,8 +16,10 @@ export const setExtraProps = ( attributes ) => {
     const { vaadinTheme } = attributes;
 
     // If no theme is selected, return the following.
-    if ( typeof vaadinTheme === 'undefined' || !vaadinTheme ) {
-        return { theme: '' };
+    if ( isEmptyElement( vaadinTheme ) ) {
+    //if ( typeof vaadinTheme === 'undefined' || !vaadinTheme ) {
+
+        return {};
     }
 
     return { theme: vaadinTheme };

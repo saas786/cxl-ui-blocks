@@ -11,13 +11,10 @@
 // Imports the design setting fields.
 import fields   from './block-controls/fields';
 
-// Imports the design settings panel.
-import PanelDesignSettings from './block-controls/panel-design-settings';
-
 // Assign core WP variables.
 const { createHigherOrderComponent } = wp.compose;
 const { Fragment }                   = wp.element;
-const { InspectorControls }          = wp.blockEditor;
+const { InspectorAdvancedControls }  = wp.blockEditor;
 const { addFilter }                  = wp.hooks;
 
 /**
@@ -59,9 +56,13 @@ const CXLUIBlockEdit = createHigherOrderComponent( ( BlockEdit ) => {
 		return (
 			<Fragment>
 				<BlockEdit { ...props } />
-				<InspectorControls>
-					{ PanelDesignSettings( props, blockFields ) }
-				</InspectorControls>
+				<InspectorAdvancedControls>
+                    {
+                        blockFields.map( ( field, i ) => {
+                            return field.control( props )
+                        } )
+                    }
+				</InspectorAdvancedControls>
 			</Fragment>
 		);
 	};
