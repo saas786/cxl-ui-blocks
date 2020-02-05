@@ -38,7 +38,7 @@ export default ( props ) => {
 	return (
         <TextControl
             key="vaadinTheme"
-            className="html-vaadinTheme-control"
+            className="html-vaadin-theme-control"
             label={ __( 'Vaadin Theme' ) }
             value={ props.attributes.vaadinTheme || '' }
             onChange={ ( nextValue ) => {
