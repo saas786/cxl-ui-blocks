@@ -26,7 +26,7 @@ export default [
 		name:    'vaadinTheme',
 		control: ControlVaadinTheme,
         setExtraProps: setExtraProps,
-        restrictBlocks: true,
+        restrictBlocks: false,
         attributes: {
             type: 'string',
             default: '',
@@ -34,11 +34,6 @@ export default [
             attribute: 'theme',
             selector: '*',
         },
-		blocks:  [
-			'core/image',
-			'core/gallery',
-			'core/media-text',
-			'core/paragraph'
-		],
+		blocks:  [],
 	}
 ];
