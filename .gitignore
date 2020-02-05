@@ -1,0 +1,12 @@
+.DS_Store
+yarn.lock
+yarn-error.log
+*.backup
+*.diff
+*.orig
+*.patch
+*.sw*
+*.idea
+public/
+node_modules/
+vendor/

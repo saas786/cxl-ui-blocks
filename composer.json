@@ -1,0 +1,24 @@
+{
+    "name": "cxl/ui-blocks",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Leho Kraav",
+            "email": "leho@conversionxl.com"
+        }
+    ],
+    "repositories": [
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "CXL\\UI\\Blocks\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "scripts": {
+    }
+}
