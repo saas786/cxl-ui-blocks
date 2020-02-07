@@ -25,10 +25,7 @@ class CXLUi {
      */
     protected function init(): void {
 
-        //add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_cxl_ui' ] );
-       // add_action( 'enqueue_block_assets', [ $this, 'enqueue_cxl_ui' ] );
-        //add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_cxl_ui' ] );
-        add_action( 'init', [ $this, 'enqueue_cxl_ui' ] );
+        add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_cxl_ui' ] );
 
     }
 
@@ -67,10 +64,10 @@ class CXLUi {
         // tools catch up, we'll internationalize in the JS files.
         wp_localize_script( 'cxl-ui-blocks-editor', 'cxlUIEditor', [
             'labels' => [
-                'default'        => __( 'Default',         'cxl-ui' ),
-                'designSettings' => __( 'Design Settings', 'cxl-ui' ),
-                'none'           => __( 'None',            'cxl-ui' ),
-                'theme'          => __( 'Theme',           'cxl-ui' )
+                'default'        => __( 'Default',            'cxl-ui' ),
+                'designSettings' => __( 'Design Settings',    'cxl-ui' ),
+                'none'           => __( 'None',               'cxl-ui' ),
+                'theme'          => __( 'Theme Attribute(s)', 'cxl-ui' )
             ]
         ] );
 

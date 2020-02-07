@@ -11,10 +11,6 @@
 // Imports the design setting fields.
 import fields   from './block-controls/fields';
 
-// Imports the design settings panel.
-import PanelDesignSettings from './block-controls/panel-design-settings';
-import classnames from "classnames";
-
 // Imports the assign function from lodash.
 const { assign, has } = lodash;
 
